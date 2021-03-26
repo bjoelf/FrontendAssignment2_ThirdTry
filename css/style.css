@@ -1,0 +1,104 @@
+body {
+  width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: sans-serif;
+}
+img {
+  max-width: 50%;
+  object-fit: cover;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1.6fr;
+  grid-template-rows: 0.3fr 1.8fr 0.2fr;
+  gap: 3px 4px;
+  grid-template-areas:
+    "NavBar"
+    "MainBody"
+    "Footer";
+}
+
+.NavBar {
+  grid-area: NavBar;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(93, 180, 81);
+  padding: 5%;
+}
+.NavBar li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.grid-container > div {
+  border: black solid 2px;
+  image-rendering: auto;
+  text-align: center;
+}
+
+.MainBody {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-area: MainBody;
+  vertical-align: text-top;
+  background-color: rgb(253, 223, 125);
+}
+
+.Subtext {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.Subtext h2 {
+    text-align: left;
+    padding-left: 1%;
+}
+
+.Subtext span {
+    text-align: center; 
+}
+
+.Art1 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.Art2 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.SideContent {
+  grid-area: 1 / 3 / 3 / 4;
+}
+
+.Form {
+  grid-area: 1 / 1 / 3 / 4;
+
+}
+
+.forms {
+    padding: 5px;
+    border-radius: 20%;
+  }
+
+  .forms:hover {
+    color: red;
+  }
+
+.Form h2 {
+    text-align: left;
+    padding-left: 2%;
+}
+
+.Footer {
+  grid-area: Footer;  
+  background-color: blueviolet;
+}
+
+.Footer p {
+    text-align: center;
+    vertical-align:middle;
+}
